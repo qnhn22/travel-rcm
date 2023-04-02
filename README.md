@@ -10,7 +10,7 @@ GIF created with Kap
 
 ## Technologies Used
 
-Travex is built using React with Google Maps API and Travel Advisor API. The user interface is designed using Material-UI and TailwindCSS, and data is fetched using Axios.
+Travex is built using React and NodeJS with Google Maps API and Travel Advisor API. The user interface is designed using Material-UI and TailwindCSS, and data is fetched using Axios.
 
 
 
