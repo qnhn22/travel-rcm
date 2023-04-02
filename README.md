@@ -2,10 +2,6 @@
 
 Travex is a web application developed by Nhan Nguyen and Quan Nguyen. It serves as a travelling friend to help users choose hotels, restaurants, and attractions in their incoming destination. The app provides a map and a displaying sidebar containing information about these places and users can filter to find the most suitable options for them.
 
-Our github accounts:
-https://github.com/nathang15
-https://github.com/qnhn22
-
 ## Video Walkthrough
 
 <img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
