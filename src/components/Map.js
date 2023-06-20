@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GoogleMapReact from 'google-map-react';
-import { LocationOnOutlined } from '@mui/icons-material';
-import { Paper, Typography, Card, CardMedia } from '@mui/material';
+import { Paper } from '@mui/material';
 import useStyles from './styles.js';
 import Rating from '@mui/lab/Rating';
 
@@ -20,33 +19,33 @@ const Map = ({ setCoords, setBounds, coords, places, setChildClicked }) => {
                         onChange={(e) => {
                             setCoords({ lat: e.center.lat, lng: e.center.lng });
                             setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
-                          }}
+                        }}
                         onChildClick={(child) => setChildClicked(child)}
 
-                    >   
-
-                    {places?.map((place, i) => (
-                    <div
-                        className={classes.markerContainer}
-                        lat={Number(place.latitude)}
-                        lng={Number(place.longitude)}
-                        key={i}
                     >
-                        {/* <LocationOnOutlined color='primary' fontSize='large'/> */}
-                        {place.photo && (
-                        <Paper elevation={3} className={classes.paper}>
-                            <img
-                            className='rounded-md'
-                            src={place.photo.images.large.url}
-                            />
-                            <div className='text-xs font-normal' gutterBottom>
-                            {place.name}
+
+                        {places?.map((place, i) => (
+                            <div
+                                className={classes.markerContainer}
+                                lat={Number(place.latitude)}
+                                lng={Number(place.longitude)}
+                                key={i}
+                            >
+                                {/* <LocationOnOutlined color='primary' fontSize='large'/> */}
+                                {place.photo && (
+                                    <Paper elevation={3} className={classes.paper}>
+                                        <img
+                                            className='rounded-md'
+                                            src={place.photo.images.large.url}
+                                        />
+                                        <div className='text-xs font-normal' gutterBottom>
+                                            {place.name}
+                                        </div>
+                                        <Rating name="read-only" size="small" value={Number(place.rating)} readOnly />
+                                    </Paper>
+                                )}
                             </div>
-                            <Rating name="read-only" size="small" value={Number(place.rating)} readOnly />
-                        </Paper>
-                        )}
-                    </div>
-                    ))}
+                        ))}
 
                     </GoogleMapReact>
                 </div>
