@@ -73,7 +73,7 @@ function List({ places, childClicked, isLoading, type, setType, rating, setRatin
             </div>
             <div className='shadow-lg rounded-lg bg-white p-3 mt-2 ml-5'>
                 <Grid className='font-semibold text-xl'>
-                    <div className='overflow-y-auto scrollbar-hide' style={{ maxHeight: '75vh'}}>
+                    <div className='overflow-y-auto scrollbar-hide' style={{ maxHeight: '76vh'}}>
                         {places?.map((places, i) => (
                             <Grid ref={elRefs[i]} item key={i} xs={12}>
                                 <div className="mb-20">

@@ -58,11 +58,11 @@ function Header({setCoords, weatherData}) {
         <div>
           <Profile/>
         </div>
-        {isAuthenticated ? (
+        {/* {isAuthenticated ? (
         <LogoutButton/>
         ) : (
           <LoginButton/>
-        )}
+        )} */}
       </div>
       
     </header>
